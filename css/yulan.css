@@ -1,0 +1,39 @@
+/* CSS Document */
+.yulan{
+width:912px;
+height:355px;
+opacity:0.6;
+}
+.yulan:hover{
+opacity:1;
+transform: scale(1.2);
+}
+
+ .yulanbg{
+        color: #de6f64;
+        background-image: -webkit-radial-gradient(
+        #ffdcb4,
+        #b96972 25%,
+        #e88a57 50%,
+        #804170 75%,
+        #a596cd 100%);
+        text-fill-color: transparent;
+        background-clip: text;
+        background-size: 200% 100%;
+        animation: masked-animation 4s infinite linear;
+		box-shadow:0 5px 30px #000;
+    }
+ 
+    @-webkit-keyframes masked-animation {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -100% 0;
+        }
+    }
+	
+.yulanxiayi{
+margin-top:80px;
+}
+
