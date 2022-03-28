@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>XZmusic新用户注册</title>
+<link rel="shortcut icon" href="images/logo1.png"type="image/x-icon">
+<link rel="stylesheet" href="css/quanping.css">
+<style type="text/css">
+
+        #house{
+			border: 2px solid #646464; 
+			box-shadow: 20px 20px 20px #000;
+            width: 750px;
+            height: 500px;
+			position: relative;
+			margin:0 auto;
+			opacity: 1;
+			margin-top:200px;
+			background-image: linear-gradient(to right, rgba(130,54,54,0.9), rgb(97,130,180,0.9));
+        }
+        #register{
+            width: 350px;
+			height:350px;
+			float:left;
+            margin-left: 50px;
+			margin-top:25px;
+			font-size:15px;
+        }
+        #zhucearea{
+            width: 200px;
+            height: 43px;
+            border: coral;
+			margin-left:270px;
+			font-size:18px;
+			box-shadow:10px 10px 20px #000;
+			cursor:pointer;
+        }
+		
+		#inputstyle{
+			height:30px;
+			width:200px;
+			border-radius:10px;
+		}
+		
+		input:focus{
+			box-shadow:5px 5px 20px #000;
+		}
+		
+		::-webkit-input-placeholder{
+			font-size:15px;
+		}
+		
+		#selectstyle{
+			border-radius:7px;
+		}
+		
+        .weizhi{
+		float:right;
+		height:50px;
+		width:50px;
+		}
+		
+		.imageweizhi{
+		width:350px;
+		height:375px;
+		float:right;
+		}
+		
+		.imgtouxiang {
+			width:200px;
+			height:200px;
+			border:5px groove #CCCCCC;
+		}
+    </style>
+
+</head>
+
+<body>
+<div class="wrapper">
+<div id="web_bg" style="background-image: url(images/bg.jpg); filter:blur(5px)"></div>
+
+        <div id="house">
+		<p style="font: '微软雅黑';font-size:20px; font-weight:bolder; margin-top:10px;">欢迎注册XZmusic</p>
+		<div class="imageweizhi">
+		<img src="images/touxiang.jpg" style="margin:40px auto auto 50px" class="imgtouxiang">
+		<input type="file" style="float:right; margin:50px 20px 0 70px" id="touxiang">
+		</div>
+            <form action="*" method="post" id="register">
+                <table>
+                    <tr>
+                        <td><p style="font-weight:bold">用户名</p></td>
+                        <td><input placeholder="请输入您的昵称" id="inputstyle" style="font-size:15px"> </td>
+                    </tr>
+					
+					<tr>
+						<td><p style="font-weight:bold">性别&nbsp;
+						<select name=""  id="selectstyle">
+							<option></option>
+							<option>男</option>
+							<option>女</option>
+							<option>模糊</option>
+						</select>
+							</p>
+						</td>
+						<td><p style="font-weight:bold">&nbsp;&nbsp;国籍&nbsp;
+						<select name="" id="selectstyle">
+							<option></option>
+							<option>中国</option>
+							<option>美国</option>
+							<option>日本</option>
+							<option>韩国</option>
+							<option>英国</option>
+						</select>
+							</p>
+						</td>
+					</tr>
+					
+                    <tr>
+                        <td><p style="font-weight:bold">登录密码</p></td>
+                        <td><input type="password" placeholder="请输入您的密码" id="inputstyle" style="font-size:15px"></td>
+                    </tr>
+					
+                    <tr>
+                        <td><p style="font-weight:bold">确认密码</p></td>
+                        <td><input type="password" placeholder="再次输入密码" id="inputstyle" style="font-size:15px"></td>
+                    </tr>
+					
+                    <tr>
+                        <td><p style="font-weight:bold">绑定手机号码</p></td>
+                        <td><input placeholder="请输入您的手机号" id="inputstyle" style="font-size:15px"></td>
+                    </tr>
+                </table>
+				
+              		<tr>
+						<td><p style="font-weight: 500"><input name="" type="checkbox" value="" />
+							 &nbsp;请同意用户隐私协议
+							 </p>
+						</td>
+					</tr>
+					
+            </form>		
+			  <input type="button" id="zhucearea" value="注册" onclick="window.location.href='index.html'">
+        </div>
+</div>
+</body>
+<script>
+	let touxiang = document.querySelector("#touxiang");
+	let imgtouxiang = document.querySelector(".imgtouxiang");
+	touxiang.addEventListener("change", ()=>{
+		let path = touxiang.value;
+		path = path.split("\\");
+		path = "D:\\XZmusic\\xzmusic\\images\\" + path[2];
+		imgtouxiang.src = path;
+	})
+	
+</script>
+
+</html>

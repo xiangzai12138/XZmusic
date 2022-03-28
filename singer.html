@@ -1,0 +1,377 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>歌手</title>
+<link rel="stylesheet" href="css/quanping.css">
+<link rel="shortcut icon" href="images/logo1.png"type="image/x-icon">
+<link rel="stylesheet" href="css/daohang.css">
+<style>
+.leftarea{
+	background-color:rgba(50,50,50,0.7);
+	border-radius:30px;
+	margin:130px auto 0 auto;
+	float:left;
+	margin-left:120px;
+    width: 35%;
+	height:500px;
+	border:5px groove #ffffff;
+	box-shadow:10px 10px 20px #eee;
+}
+.rightarea{
+	margin:230px auto 0 auto;
+	float:right;
+	margin-right:50px;
+    width: 53%;
+	height:720px;
+	background-color:rgba(200,200,200,0.8);
+	border-radius:50px;
+}
+
+.bottom{
+  z-index:-99;
+  position:absolute;
+  margin-top:50%;
+  background: #333;
+  border: 1px solid #333333;
+  box-shadow: 0 -5px 30px #000;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  color: white;
+}
+
+.hide{display:none;
+}
+#tab_t{
+height:25px;
+margin-top:30px;
+}
+#tab_t li{
+float:left;
+width:150px;
+height:35px;
+line-height:24px;
+margin:30px 25px;
+text-align:center;
+border-radius:10px;
+border-bottom:none;
+background:#f5f5f5;
+cursor:pointer;
+font-size:14px;
+list-style:none;
+padding-top:10px;
+font-size:18px;
+font-weight:bold;
+}
+
+#tab_t .act{
+position:relative;
+height:35px;
+box-shadow:10px 10px 20px #000;
+font-size:18px;
+font-weight:bolder;
+color: #00FFFF;
+transform:scale(1.2);
+transition: all 0.2s ease-in-out;
+background-image: -webkit-radial-gradient(
+        #ffdcb4,
+        #b96972 25%,
+        #e88a57 50%,
+        #804170 75%,
+        #a596cd 100%);
+        text-fill-color: transparent;
+        background-clip: text;
+        background-size: 200% 100%;
+        animation: masked-animation 4s infinite linear;
+}
+ @-webkit-keyframes masked-animation {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -100% 0;
+        }
+    }
+	
+#tab_c{
+border:5px solid #333;
+border-top:none;
+top:10px;
+padding:10px;
+background-color:rgba(200,200,200,0.7);
+height:650px;
+border-radius:20px;
+position:relative;
+}
+#tab_c img:hover{
+transform:scale(1.15);
+transition: all 0.2s ease-in-out;
+cursor:pointer;
+}
+#tab_c p:hover{
+color: #990000;
+font-weight:bold;
+cursor:pointer;
+
+}
+#tab_c audio{
+margin-bottom:20px;
+margin-left:50px;
+width:400px;
+}
+
+
+</style>
+
+</head>
+
+<body>
+<div id="web_bg" style="background-image:url(images/bg.jpg); overflow:auto">
+<ul class="nav">
+
+            <div class="nav1" style="padding-left:50px; padding-right:30px"><img src="images/finallogo.png" width="50px" height="50px"  style="margin-left:5px; margin-top:10px; opacity:0.8"/><a href="login.html"><font color="#FFFFFF" size="5">首页</font></a>
+			<div class="nav2">
+				<a href="https://music.163.com/#/my/m/music/playlist?id=2357385512" target="_blank"><font color="#FFFFFF" size="5">喜欢</font></a>
+				<a href="index.html"><font color="#FFFFFF" size="5">登录</font></a>
+				<a href="zhuce.html"><font color="#FFFFFF" size="5">注册</font></a>
+				<a href="kefu.html"><font color="#FFFFFF" size="5">客服</font></a>
+				<a href="#about"><font color="#FFFFFF" size="5">关于</font></a>	
+			</div>
+			</div>
+
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#gedan">歌单</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#xinge">新歌</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#paihang">排行榜</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="MV.html">MV</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="singer.html">歌手</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="shop.html">外设商城</a></font></div>
+
+</ul>
+
+<div class="leftarea">
+	<ul id="tab_t">
+ 		<li class="act">周杰伦</li>
+ 		<li>林俊杰</li>
+		<li>薛之谦</li>
+		<li>李荣浩</li>
+		<li>毛不易</li>
+		<li>张杰</li>
+		<hr style="width:600px; height:3px; margin-left:-6px"></hr>
+		<li>Maroon 5</li>
+		<li>OneRepublic</li>
+		<li>Alan Walker</li>
+		<li>Justin Bieber</li>
+		<li>Taylor Swift</li>
+		<li>Eminem</li>
+ 	</ul>
+</div>
+
+<div class="rightarea">
+
+<div id="tab_c">
+		
+ 		<div style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer1img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;周杰伦（Jay Chou），1979年1月18日出生于台湾省新北市，中国台湾流行乐男歌手、音乐人、演员、导演、编剧、监制、商人。
+    2000年发行首张个人专辑《Jay》。2001年发行的专辑《范特西》奠定其融合中西方音乐的风格。2002年举行“The One”世界巡回演唱会。2003年成为美国《时代周刊》封面人物。2004年获得世界音乐大奖中国区最畅销艺人奖。2005年凭借动作片《头文字D》获得台湾电影金马奖、香港电影金像奖最佳新人奖。2006年起连续三年获得世界音乐大奖中国区最畅销艺人奖。
+    2007年自编自导的文艺片《不能说的秘密》获得台湾电影金马奖年度台湾杰出电影奖。
+    2008年凭借歌曲《青花瓷》获得第19届金曲奖最佳作曲人奖。
+    2009年入选美国CNN评出的“25位亚洲最具影响力的人物”；同年凭借专辑《魔杰座》获得第20届金曲奖最佳国语男歌手奖。
+    2010年入选美国《Fast Company》评出的“全球百大创意人物”。
+    2011年凭借专辑《跨时代》再度获得金曲奖最佳国语男歌手奖，并且第4次获得金曲奖最佳国语专辑奖；同年主演好莱坞电影《青蜂侠》。
+    2012年登福布斯中国名人榜榜首。
+    2014年发行华语乐坛首张数字音乐专辑《哎呦，不错哦》。
+    2018年举行“地表最强2世界巡回演唱会”。
+    周杰伦热心公益慈善，多次向中国内地灾区捐款捐物。2008年捐款援建希望小学。2014年担任中国禁毒宣传形象大使。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《以父之名》</h1>
+				<li><audio src="music/song1.1.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/doge.gif" /></li>
+			</ul>
+		</div>
+		
+		
+ 		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer2img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;JJ林俊杰的创作来自最深的情感，他的声音唱出灵魂的璀璨，他把音乐和梦想当做能量，一路走到无人取代的地位，他写下华语乐坛最动人的经典乐章，撼动亚洲数十亿颗心跳。他是亚洲乐坛全能唱作天王JJ林俊杰。
+2003年首发第一张个人创作专辑《乐行者》，取得不俗成绩；其杰出的创作才能又在之后2004年的凭借歌曲《江南》而成名，并于同年获得第15届金曲奖之“最佳演唱新人奖”。随后的《小酒窝》《曹操》《她说》等歌曲亦造成广大回响。2011年8月8日携手华纳，迈出世界。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《江南》</h1>
+				<li><audio src="music/song1.2.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px; margin-left:200px"><img src="images/cat.gif" /></li>
+			</ul>
+		</div>
+		
+ 		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer3img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;薛之谦（Joker Xue），1983年7月17日出生于上海，华语流行乐男歌手、影视演员、音乐制作人，毕业于格里昂酒店管理学院。
+2005年，因参加选秀节目《我型我秀》而正式出道。2006年，发行首张同名专辑《薛之谦》，随后凭借歌曲《认真的雪》获得广泛关注。2007年，凭借专辑《你过得好吗》获得MusicRadio中国TOP排行榜内地年度最受欢迎男歌手奖。2008年，发行专辑《深深爱过你》；同年在上海举行个人首场演唱会“谦年传说”。2013年，专辑《几个薛之谦》获得MusicRadio中国TOP排行榜内地推荐唱片。2014年，凭借专辑《意外》获得第21届东方风云榜颁奖最佳唱作人；同年他还获得音悦V榜年度盛典年度创作歌手奖。
+2015年6月，薛之谦首度担当制作人并发行原创EP《绅士》；同年，他还主演都市励志剧《妈妈像花儿一样》。2016年，凭借EP《绅士》《一半》获得第16届全球华语歌曲排行榜最受欢迎男歌手、五大最受欢迎男歌手奖、上海地区杰出歌手奖及最受欢迎创作歌手奖，而歌曲《初学者》则获得年度二十大金曲奖。2017年4月，开启“我好像在哪见过你”全国巡回演唱会；同年，薛之谦获得第7届全球流行音乐年度盛典年度最佳男歌手及MusicRadio榜中国TOP排行榜内地最佳男歌手。
+2018年7月，薛之谦“摩天大楼”世界巡回演唱会于北京站启程，整个巡演横跨4大洲，8个国家，21个城市，累计上演场次23场。2019年2月14日，薛之谦在马来西亚举办巡回演唱会；同年12月27日，发行第十张个人专辑《尘》。2020年1月11日薛之谦获得年度原创音乐人。2020年12月31日，发行第11张个人专辑《天外来物》。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《动物世界》</h1>
+				<li><audio src="music/song1.3.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:100px"><img src="images/wind.gif" /></li>
+			</ul>
+		</div>
+		
+		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer4img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;李荣浩（Ronghao Li），1985年7月11日出生于安徽省蚌埠市，中国内地流行乐男歌手、音乐人、演员。
+2010年，发行个人首张音乐EP《小黄》。2013年，发行个人首张音乐专辑《模特》，凭该专辑成为首位获得台湾金曲奖“最佳新人奖”的中国大陆歌手。2014年，发行同名音乐专辑《李荣浩》，凭该专辑获得中国TOP排行榜“年度内地最佳男歌手奖”。2016年，发行音乐专辑《有理想》，随后，举行的23场“有理想”世界巡演获得第21届华语榜中榜“亚洲影响力最佳演唱会奖”。2017年，发行个人音乐专辑《嗯》，凭该专辑获得第22届全球华语榜中榜亚洲影响力最佳男歌手奖；同年，他的个人巡演首次登陆香港体育馆和台北小巨蛋体育馆。2018年，发行音乐专辑《耳朵》，凭该专辑提名第30届台湾金曲奖最佳国语男歌手奖。2019年，担任浙江卫视歌唱选秀节目《中国好声音》的导师；同年，获得Mnet亚洲音乐大奖“亚洲最佳艺人奖”。2020年，发行音乐专辑《麻雀》。2021年2月，参加综艺节目《青春有你3》；4月，出演电影《一帆风顺》并发布单曲《不遗憾》；7月30日，担任《2021中国好声音》导师。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《喜剧之王》</h1>
+				<li><audio src="music/song1.4.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/cute.gif" /></li>
+			</ul>
+		</div>
+		
+		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer5img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;毛不易，原名王维家，1994年10月1日出生于黑龙江省齐齐哈尔市泰来县，中国内地流行乐男歌手，毕业于杭州师范大学护理专业。
+2017年，参加选秀娱乐节目《明日之子》的比赛，获得全国总决赛冠军，从而正式进入演艺圈；11月11日，推出个人原创单曲《项羽虞姬》；12月28日，获得腾讯娱乐白皮书音乐年度之星奖。2018年1月7日，获得首届金鲛奖年度十佳网络新星奖；4月，作为“无限唱作人”参加江苏卫视音乐唱作类真人秀节目《无限歌谣季》；5月31日，推出首张个人录音室专辑《平凡的一天》；同年，获得亚洲新歌榜年度盛典年度最佳音乐人奖、亚洲音乐盛典最具潜力男歌手奖、年度最佳唱作人奖。2019年3月25日，其演唱的歌曲《平凡的一天》获得第26届东方风云榜音乐盛典十大金曲奖、最佳作词奖；8月，获2019福布斯中国100名人榜荣誉。2020年1月，以首发歌手身份加盟湖南卫视音乐竞技节目《歌手·当打之年》；1月22日，推出第2张个人音乐专辑《小王》；1月28日，为电影《?迓琛费莩?的片尾曲《红莓花儿开》上线；3月，作为教练团成员加盟《创造营2020》；5月15日，与弹幕视频网站联合发行单曲《入海》；7月，加盟腾讯视频音乐团体竞演节目《炙热的我们》担任团王见证人。9月20日，举办毛不易2020“像我这样的人”线上演唱会。2021年6月，推出第三张全新创作专辑《幼鸟指南》。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《消愁》</h1>
+				<li><audio src="music/song1.5.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/doge.gif" /></li>
+			</ul>
+		</div>
+		
+		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer6img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;张杰（Jason Zhang），1982年12月20日出生于四川省成都市，中国流行男歌手。
+2004年参加歌唱类选秀《我型我秀》，获得全国总冠军并出道。2007年参加歌唱类选秀《快乐男声》，获得总决赛第四名；随后发行的EP《最美的太阳》拿下亚马逊年度唱片销量冠军。2008年发行专辑《明天过后》，凭借该专辑获得北京流行音乐典礼11项提名。2010年发行专辑《这，就是爱》；同年获得韩国MAMA亚洲最佳歌手奖。2012年在人民大会堂开启个人首轮巡演；同年获得湖南省“五个一”工程奖。2013年首次参加央视春晚，演唱歌曲《给我你的爱》。
+2014年，获得第42届全美音乐奖年度国际艺人奖，成为首位获得此奖的华人歌手。2016年开启张杰我想世界巡回演唱会，覆盖亚、欧、美、澳四个大洲，并成为首位在欧洲开个唱的内地歌手。2017年获得中国金唱片奖最佳流行歌手奖；2018年献唱建军91周年主题曲《微笑着胜利》；同年开启的张杰未-LIVE巡回演唱会两次开唱北京鸟巢，并且两度刷新鸟巢单场演唱会票房纪录；随后发行的MIX-POP专辑《未-LIVE》销量打破IFPI三白金认证。2019年他的巡演人数成为年度歌手巡演总人次内地冠军。2020年发行英文专辑《Risk It All声来无畏》。2020年12月18日，发行单曲《跃进人海拥抱你》。2021年1月23日，发行单曲《梦想新大陆》。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《自己》</h1>
+				<li><audio src="music/song1.6.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/doge.gif" /></li>
+			</ul>
+		</div>
+		
+		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer7img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Maroon 5（魔力红），美国摇滚乐队，成立于1994年，由亚当·莱文、詹姆斯·瓦伦汀、杰西·卡麦可、米基·麦登、马特·弗林、PJ Morton、山姆·法拉尔组成。
+2005年，魔力红凭借专辑《Songs About Jane》摘下了第47届格莱美最佳新人奖。2007年，魔力红依靠专辑《It Won't Be Soon Before Long》在上市第一周以近四十三万张的高销量在公告牌专辑榜中获得冠军。2010年9月21日，魔力红第三张录音室专辑《Hands All Over》发行。2011年9月1日，魔力红与克里斯蒂娜·阿奎莱拉合作的曲目《Moves Like Jagger》获得该周公告牌Hot 100单曲榜榜首位置。2012年6月，魔力红凭借单曲《Payphone》在英国流行音乐单曲榜中首次登顶；11月，单曲《One More Night》第九周夺得公告牌Hot 100单曲榜冠军。2013年4月，2013年度公告牌音乐奖公布了提名名单，魔力红拿到了11个奖项的提名。2014年9月10日，魔力红依靠专辑《V》第二次获得公告牌专辑榜的冠军。2015年10月，魔力红获得全美音乐奖年度最佳艺人提名。2016年11月，魔力红在2016年全美音乐奖颁奖典礼上登台表演。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《Maps》</h1>
+				<li><audio src="music/song2.1.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/doge.gif" /></li>
+			</ul>
+		</div>
+		
+		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer8img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OneRepublic（共和时代），美国流行摇滚乐队，2002年组建于美国科罗拉多州科罗拉多斯普林斯，由主唱瑞恩·泰德、吉他手扎克·费尔肯斯、德鲁·布朗、贝斯手布伦特·库泽、鼓手艾迪·费雪组成。
+2006年在社交网站上发布首支单曲《Apologize》，并因此受到关注。2007年发行首张录音室专辑《Dreaming Out Loud》，从而正式出道；同年凭借歌曲《Apologize》在美国公告牌百强单曲榜取得了亚军。2008年获得MTV欧洲音乐奖最佳新人奖提名。2009年凭借歌曲《Apologize》入围第51届格莱美奖最佳流行组合演唱奖；同年发行乐队第二张录音室专辑《Waking Up》。
+2011年入围第39届全美音乐奖最受欢迎流行/摇滚乐队奖。2013年推出第三张录音室专辑《Native》，专辑内的单曲《Counting Stars》在全球54个国家音乐排行榜登顶。2016年发行第四张录音室专辑《Oh My My》。2021年推出第五张录音室专辑《Human》。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《Counting Stars》</h1>
+				<li><audio src="music/song2.2.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/doge.gif" /></li>
+			</ul>
+		</div>
+		
+		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer9img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Alan Walker（艾伦·沃克，1997年8月24日），出生于英国英格兰北安普敦郡，挪威DJ、音乐制作人。
+2014年11月，在YouTube上推出个人电音作品《Fade》而出道。2015年12月，通过索尼音乐发行个人第一首正式单曲《Faded》，该首歌曲的MV在YouTube上的点击量突破了12亿。他的成就远不至此：欧洲十个国家单曲榜冠军，英国单曲榜前十位，澳大利亚单曲榜亚军，也就在最近，更是跻身美国公告牌大热单曲榜。全球Shazam榜连续7周冠军，欧洲电台连续6周冠军。成长于数字化盛行的年代，Walker早期对电脑产生极大的兴趣爱好，之后更是转攻编程和平面设计。2012年他在网友的帮助和支持下开始做音乐，并迅速在游戏玩家中盛行起来，他们继而将Walker的音乐放在自己Youtube原创的视频中。这些歌曲迅速风靡全球并受到唱片公司的青睐，使他一跃成为当今最具潜力的年轻DJ之一。
+2016年6月，发行人声伴唱电音单曲《Sing Me To Sleep》。同年11月6日，获得MTV欧洲音乐奖“最佳挪威艺人”奖。2017年2月22日，《Faded》入围第37届全英音乐奖“年度英国单曲”奖。同年5月，发布首支由男声伴唱的电音作品《Tired》。2018年，发行首张录音室专辑《Different World》。2019年3月21日，发布《和平精英》盛夏推广曲《On My Way》。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《Faded》</h1>
+				<li><audio src="music/song2.3.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/doge.gif" /></li>
+			</ul>
+		</div>
+		
+		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer10img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;贾斯汀·比伯（Justin Bieber），1994年3月1日出生于加拿大安大略省斯特拉特福市，加拿大男歌手、影视演员。
+2008年，贾斯汀·比伯在视频网站YouTube上被其经纪人斯科特发现，随后被亚瑟小子培养进入歌坛。2009年，发行第一张个人专辑《My World》，并凭借专辑获得全美音乐奖年度艺人。2010年3月，比伯发行第二张个人专辑《My World2.0》，专辑于一周内登上公告牌专辑冠军。11月，凭借单曲《Baby》获得第27届MTV音乐奖最佳新人。2011年8月，凭借歌曲《U Smile》获得第28届MTV音乐录影带大奖最佳男歌手录影带奖。11月，获得欧洲MTV音乐奖最佳流行歌手奖和最佳男歌手奖。2012年7月，凭借单曲《Boyfriend》获得美国青少年选择奖最佳男歌手。2013年，发行现场专辑《Believe Acoustic》，并凭借该专辑获得了第40届全美音乐奖最佳艺人奖。2015年8月，发行个人单曲《What Do You Mean?》并获得公告牌百强单曲榜首周冠军。11月，发行个人专辑《Purpose》，该专辑被提名第57届格莱美奖的年度专辑奖项。2016年2月，凭借歌曲《Where Are U Now》夺得第58届格莱美最佳舞曲录制奖。7月，演唱的歌曲《Sorry》提名美国MTV音乐录影带大奖年度最佳录影带。12月，单曲《Love Yourself》获得第59届格莱美奖年度歌曲提名。2017年8月17日，与BloodPop联合发布单曲《Friends》。2020年2月14日，录音室专辑《Changes》正式发布。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《Love Yourself》</h1>
+				<li><audio src="music/song2.4.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/doge.gif" /></li>
+			</ul>
+		</div>
+		
+		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer11img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;泰勒·斯威夫特（Taylor Swift），1989年12月13日出生于美国宾夕法尼亚州，美国创作型歌手、美国流行音乐、乡村音乐创作型女歌手、音乐制作人、演员、慈善家。
+2006年与独立唱片公司大机器唱片签约，发行首张录音室专辑《泰勒·斯威夫特》，获美国唱片业协会认证5倍白金唱片。2008年发行第二张录音室专辑《Fearless》，在美国公告牌专辑榜上获11周冠军，是2009年全美最畅销专辑，认证7倍白金唱片，专辑获第52届格莱美奖年度专辑，使泰勒成为获此奖项的最年轻歌手，也是获奖最多的乡村音乐专辑。2010年发行第三张录音室专辑《Speak Now》，单曲《Mean》获2座格莱美奖。同年获创作人名人堂哈尔·戴维星光奖。2012年发行第四张录音室专辑《Red》。2013年11月获第47届乡村音乐协会奖巅峰奖。
+2014年发行第五张专辑《1989》，发行首周售出128万张为近12年最高纪录，使泰勒成为了美国历史上唯一一位拥有三张首周百万销量专辑的歌手，专辑也是2014年全美最畅销专辑，专辑获第58届格莱美奖年度专辑，使泰勒成为格莱美历史上第一位两次获得此奖项的女歌手；同年11月获第42届全美音乐奖迪克·克拉克成就奖；12月入围《时代》年度人物。2015年4月获第50届乡村音乐学院奖50周年里程碑奖；5月，成为2015福布斯全球权势女性榜上榜最年轻女性。2016年7月，《福布斯》公布全球百大名人榜，泰勒以1.7亿美元位居榜首。2017年发行第六张录音室专辑《Reputation》，美国首周销量123.8万张，使她成为唯一一位拥有四张首周百万销量专辑的歌手；同年被《时代周刊》选为年度人物。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《ME!》</h1>
+				<li><audio src="music/song2.5.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/doge.gif" /></li>
+			</ul>
+		</div>
+		
+		<div class="hide" style="width:400px; height:240px; float:left; margin:30px 0 0 150px; border-right:3px solid #990000">
+			<img src="images/singer12img.jpg" />
+			<p style="height:300px; width:520px; float: left; font-size:14px; margin:20px 0 0 -120px; border-right:3px solid #990000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Eminem（埃米纳姆），本名马歇尔·布鲁斯·马瑟斯三世（Marshall Bruce Mathers III），1972年10月17日出生于美国密苏里州圣约瑟夫，美国说唱歌手、词曲作者、唱片制作人、演员。
+1996年，埃米纳姆首次以个人身份推出专辑《Infinite》。1998年，受Dr.Dre赏识，与Aftermath娱乐签约。1999年，成立Shady唱片公司，并推出第二张录音室专辑《The Slim Shady LP》，该专辑获得了第42届格莱美奖最佳说唱专辑，专辑曲目《My Name Is》让他获得了最佳说唱歌手。2000年，发行第三张录音室专辑《The Marshall Mathers LP》，该专辑不仅收获了两项格莱美奖，其全球销量还突破了3200万张。2002年，第四张录音室专辑《The Eminem Show》正式发行，该专辑的全球销量超过了2700万张；同年，主演剧情电影《8英里》，其演唱的主题曲《Lose Yourself》获得了第75届奥斯卡金像奖最佳原创歌曲。2004年，发行第五张录音室专辑《Encore》。
+2009年，推出第六张录音室专辑《Relapse》而复出。2010年，发行第七张录音室专辑《Recovery》，专辑曲目《Not Afraid》《Love The Way You Lie》成为美国公告牌百强单曲榜的冠军单曲。2013年，第八张录音室专辑《The Marshall Mathers LP 2》正式发行。2017年，发行第九张录音室专辑《Revival》。2018年，第十张录音室专辑《Kamikaze》正式发行。2019福布斯100名人榜排名第57位。2020年，推出第十一张录音室专辑《Music to Be Murdered By》。
+			</p>
+			<ul style="position:absolute; left:530px; top:150px; list-style:none;">
+				<h1 align="center" style="margin-top:-50px; margin-bottom:130px; font-size:40px; font-weight:bolder">《Lose Yourself》</h1>
+				<li><audio src="music/song2.6.mp3" controls="controls" loop autoplay></audio></li>
+				<li style="float:right; margin-top:50px"><img src="images/doge.gif" /></li>
+			</ul>
+		</div>
+		
+		
+   </div>
+
+</div>
+
+<div class="bottom">
+<p>&nbsp;</p>
+<p>客服E-mail：2039989733@qq.com</p>
+	<p>地址：-------------- &nbsp;&nbsp; 电话：-------------</p>
+	<p></p>
+	<p id="about">&copy;=============</p>
+</div>
+
+
+</div>
+</body>
+
+<script>
+window.onload = function(){
+ tab("tab_t","li","tab_c","div","onmouseover")
+ function tab(tab_t,tab_t_tag,tab_c,tag_c_tag,evt){
+  var tab_t = document.getElementById(tab_t);
+  var tab_t_li = tab_t.getElementsByTagName(tab_t_tag);
+  var tab_c = document.getElementById(tab_c);
+  var tab_c_li = tab_c.getElementsByTagName(tag_c_tag);
+  var len = tab_t_li.length;
+  var i=0;
+  for(i=0; i<len; i++){
+   tab_t_li[i].index = i;
+   tab_t_li[i][evt] = function(){
+    for(i=0; i<len; i++){
+     tab_t_li[i].className = '';
+     tab_c_li[i].className = 'hide';
+    }
+    tab_t_li[this.index].className = 'act';
+    tab_c_li[this.index].className = '';
+   }
+  }
+ }
+}
+</script>
+
+</html>

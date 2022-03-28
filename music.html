@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Music player</title>
+    <link rel="stylesheet" href="index.css" />
+	<link rel="stylesheet" href="css/quanping.css">
+	<link rel="shortcut icon" href="images/logo1.png"type="image/x-icon">
+	<link rel="stylesheet" href="css/daohang.css">
+  </head>
+<style>
+*{
+    box-sizing: border-box;
+}
+body{
+    background: #000;
+}
+
+.bottom{
+  position:absolute;
+  margin-top:50%;
+  background: #333;
+  border: 1px solid #333333;
+  box-shadow: 0 -5px 30px #000;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  color: white;
+}
+
+.singer{
+	margin:100px auto 0 auto;
+	float:left;
+	margin-left:50px;
+    width: 38%;
+	height:700px;
+	background-color:rgba(150,150,150,0.7);
+	border-radius:30px;
+	box-shadow:20px 20px 30px #000;	
+}
+.singerimg{
+	height:250px;
+	width:250px;
+	margin:0 auto;
+	float:left;
+	margin-top:20px;
+	margin-left:40px;
+}
+img:hover{
+	transition: all 0.2s ease-in-out;
+	transform: scale(1.4);
+	cursor:pointer;
+}
+.citiao{
+	height:127px;
+	width:268px;
+	margin:0 auto;
+	float:right;
+	margin-right:100px;
+}
+.jieshao{
+	margin:0 auto;
+	width:650px;
+	height:200px;
+}
+.container{
+	margin:300px auto 0 auto;
+	float:right;
+	margin-right:50px;
+    width: 55%;
+	height:800px;
+	background-color:rgba(33,33,33,0.7);
+	border-radius:30px;
+	box-shadow:20px 20px 30px #000;
+	padding-top:20px;
+}
+.container #MusicPlayer{
+    width: 250px;
+    display: block;
+    margin: 0 auto;
+	opacity:0.5;
+	transition: all 0.3s ease-in-out;
+}
+.container #MusicPlayer:hover{
+	width:700px;
+	opacity:0.9;
+}
+.container .btn{
+    display: block;
+    margin:10px auto 50px auto;
+	width:120px;
+	height:30px;
+	opacity:0.5;
+}
+.container .lrc{
+    width: 1000px;
+    height: 450px;
+    overflow: hidden;
+    display: block;
+    margin: 0 auto;
+}
+.container .lrc #ullrc{
+    width: 100%;
+    padding: 0;
+    list-style: none;
+    transition: 0.3s all ease;
+    margin: 0;
+}
+/*歌词普通样式*/
+.container .lrc #ullrc li{
+    height: 35px;
+    line-height: 35px;
+    font-size:1.5em;
+    color: #aaa;
+    font-weight: normal;
+    transition: .3s all ease;/*一定要加上不然看着突兀*/
+    list-style-type: none;
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+
+}
+/*动态歌词样式*/
+.container .lrc #ullrc li.active{ 
+    font-size: 2em;
+    color: #fff;
+    font-weight: bold;
+}
+</style>
+<body>
+  
+<div id="web_bg" style="background-image:url(images/bg.jpg); overflow:auto">
+<ul class="nav">
+
+            <div class="nav1" style="padding-left:50px; padding-right:30px"><img src="images/finallogo.png" width="50px" height="50px"  style="margin-left:5px; margin-top:10px; opacity:0.8"/><a href="login.html"><font color="#FFFFFF" size="5">首页</font></a>
+			<div class="nav2">
+				<a href="https://music.163.com/#/my/m/music/playlist?id=2357385512" target="_blank"><font color="#FFFFFF" size="5">喜欢</font></a>
+				<a href="index.html"><font color="#FFFFFF" size="5">登录</font></a>
+				<a href="zhuce.html"><font color="#FFFFFF" size="5">注册</font></a>
+				<a href="kefu.html"><font color="#FFFFFF" size="5">客服</font></a>
+				<a href="#about"><font color="#FFFFFF" size="5">关于</font></a>	
+			</div>
+			</div>
+
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#gedan">歌单</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#xinge">新歌</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#paihang">排行榜</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="MV.html">MV</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="singer.html">歌手</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="shop.html">外设商城</a></font></div>
+</ul>
+
+<div class="singer">
+	<div class="singerimg">
+		<img src="images/starfall.jpg" width="250px" height="250px" style="border-radius:25px; border:2px solid #FFFFFF">
+		<p align="center" style="font-size:24px; font-weight:bold; margin-top:10px">演唱者——袁娅维</p>
+	</div>
+	<div class="citiao">
+		<img src="images/citiao.jpg" width="268px" height="127px" style="margin-top:140px; border-radius:20px; border:1px solid #333333; opacity:0.85">
+	</div>
+	<div class="jieshao">
+	<img src="images/yuanyawei.jpg" width="650px" height="200px" style="margin-top:100px; border-radius:20px; border:1px solid #333333; opacity:0.85">
+	</div>
+</div>
+
+
+<div class="container">
+ <h1 align="center" style="color:#CCCCCC; font-size:30px; margin-top:0">starfall</h1>
+    <audio id="MusicPlayer" src="music/starfall.mp3" controls loop></audio>
+     <div class="btn">
+        <button style="font-size:15px" onClick="turn -= 0.1">-0.1s</button>
+        <button style="font-size:15px" onClick="turn += 0.1">+0.1s</button>
+     </div>
+      <div class="lrc">
+        <ul id="ullrc"></ul>
+      </div>
+	</div>
+</div>
+
+<div class="bottom">
+<p>&nbsp;</p>
+<p>客服E-mail：2039989733@qq.com</p>
+	<p>地址：-------------- &nbsp;&nbsp; 电话：-------------</p>
+	<p></p>
+	<p id="about">&copy;=============</p>
+</div>
+
+</div>
+<script>
+	var lrc = 
+	`[00:00.000] 作词 : TetraCalyx
+[00:01.000] 作曲 : 蔡近翰Zoe
+[00:03.00]编曲：宫奇Gon
+[00:05.00]演唱：袁娅维
+[00:10.00]
+[00:12.00]What is reflected in my eyes? Not the moonlight in a starless midnight
+[00:18.20]that showers on the people passing by.
+[00:24.72]One's so small and the world's so wide,
+[00:27.80]every step forward echoes a sigh,
+[00:31.56]I reach out for the halo far up high.
+[00:37.10]Deeply engraved, my memory is silent but not forgotten indeed,
+[00:43.97]someone has gone but a voice within me.
+[00:49.95]Once I remember all the tales written inside this corp no more frail,
+[00:56.75]I'll follow what my heart used to believe.
+[01:03.18]Crash against the barrier above the crowd,
+[01:11.60]Flaring up pieces in the air to show a fairy starfall.
+[01:16.00]I want no tomorrow or yesterday.
+[01:24.00]These sparkles shine and never fade till the break of day.
+[01:32.00]
+[01:43.69]Deeply engraved, my memory is silent but not forgotten indeed,
+[01:50.46]someone has gone but a voice within me.
+[01:56.05]Once I remember all the tales written inside this corp no more frail,
+[02:03.00]I'll follow what my heart used to believe.
+[02:09.55]Crash against the barrier above the crowd,
+[02:17.90]Flaring up pieces in the air to show a fairy starfall.
+[02:22.20]I want no tomorrow or yesterday.
+[02:30.35]These sparkles shine and never fade till the break of day.
+[02:35.00]Crash against the barrier above the crowd,
+[02:42.60]Flaring up pieces in the air to show a fairy starfall.
+[02:47.77]I want no tomorrow or yesterday.
+[02:55.82]These sparkles shine and never fade till the break of day.
+[03:00.00]
+[03:05.50]混音：宫奇Gon
+[03:07.00]母带处理：宫奇Gon
+[03:09.50]制作人：蔡近翰Zoe`;
+
+function $(id) {
+    return document.getElementById(id);
+}//这样写以后getid方便
+
+function getLrcArray() {
+    var parts = lrc.split("\n");
+    for (let index = 0; index < parts.length; index++) {
+        parts[index] = getLrcObj(parts[index]);
+    }
+    return parts;
+
+    function getLrcObj(content) {
+        var twoParts = content.split("]");
+        var time = twoParts[0].substr(1);
+        var timeParts = time.split(":");
+        var seconds = +timeParts[1];
+        var min = +timeParts[0];
+        seconds = min * 60 + seconds;
+        var words = twoParts[1];
+        return{
+            seconds: seconds,
+            words: words,
+        };
+    } 
+}
+
+var lrcArray = getLrcArray();
+
+function inputLrc() {
+    for (let index = 0; index < lrcArray.length; index++) {
+        var li = document.createElement("li");
+        li.innerText = lrcArray[index].words;
+        $("ullrc").appendChild(li);
+    }
+}
+
+inputLrc();
+
+function setPosition() {
+    var index = getLrcIndex();
+    if (index == -1) {
+        return;
+    }
+    var lrc_li_height = 35, lrc_ul_height = 450;
+    var top = index * lrc_li_height + lrc_li_height / 2 - lrc_ul_height / 2;
+    if (top < 0) {
+        top = 0;
+    }
+    $("ullrc").style.marginTop = -top + "px";
+    var activeLi = $("ullrc").querySelector(".active");
+    if(activeLi){
+        activeLi.classList.remove("active");
+    }
+    $("ullrc").children[index].classList.add("active");
+}
+
+var turn = 0;
+
+function getLrcIndex(){
+    var time = $("MusicPlayer").currentTime + turn;
+    for (var index = 0; index < lrcArray.length; index++) {
+        if (lrcArray[index].seconds > time) {
+            return index - 1;
+        }
+    }
+}
+
+$("MusicPlayer").ontimeupdate = setPosition;
+</script>
+</body>
+</html>

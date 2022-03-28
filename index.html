@@ -1,0 +1,315 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>登录XteamZ</title>
+<link rel="stylesheet" href="css/paopao.css">
+<link rel="stylesheet" href="css/quanping.css">
+<link rel="shortcut icon" href="images/logo1.png"type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/shizhong.css" media="all" />
+	<script type='text/javascript' src="js/jquery.js"></script>
+	<script type='text/javascript' src="js/shizhong.js"></script>
+<style type="text/css">
+        .login{
+			display:none;
+        }
+        #loginDiv{
+            border: 1px solid #333333;
+			box-shadow: 20px 20px 20px #000;
+            width: 400px;
+            height: 500px;
+			position: absolute;
+			margin:auto;
+			left:0px;
+			right:0px;
+			top:0px;
+			bottom:0px;
+			opacity:0.9;
+			background-image: linear-gradient(to right, rgba(158,54,54), rgb(97,158,200));
+        }
+
+        #user{
+            width: 270px;
+            height: 34px;
+            margin-top: 120px;
+            margin-left: 100px;;
+        }
+        #password{
+            width: 270px;
+            height: 34px;
+            margin-top: 40px;
+            margin-left: 100px;
+        }
+		
+		.inputstyle{
+			width:200px;
+			height:30px;
+			border-radius:10px;
+		}
+		
+		input:focus{
+			box-shadow:5px 5px 10px #000;	
+		}
+		
+		::-webkit-input-placeholder{
+			font-size:15px;
+		}
+		
+        #check{
+            margin-top: 70px;
+            margin-left: 60px;
+        }
+        #loginbutton{
+            margin-left: 57px;
+            width: 270px;
+            height: 34px;
+            margin-top:20px;
+            background-color: aliceblue;
+            color: burlywood;
+            border:0px solid;
+            border-radius:6px;
+            font: normal 20px/44px "Microsoft Yahei";
+        }
+		#hideLogin {
+		margin-left: 300px;
+		color:#FFFFFF;
+		opacity:0.8;
+		}
+		#hideLogin:hover{
+		
+			cursor: pointer;
+			color:#FF0000;
+			
+		}
+		
+		
+	    #search ul {
+            list-style-type: none;
+            display: block;
+            width: 100px;
+            height: 33px;
+            margin: 0;
+            padding: 0;
+            border: 0px;
+            float: left;
+        }
+        #search li {
+            border: 0px;
+            margin: 0px;
+            padding: 0px;
+			font-size:30px;
+        }
+        #search .selected {
+            display: block;
+        }
+        #search form {
+            margin: 0px;
+            padding: 0px;
+        }
+        #search input {
+            height: 30px;
+            width: 200px;
+            margin: 0px;
+			border-radius:30px;
+			opacity:0.3;
+			transition: all 0.5s ease-in;
+        }
+		#search .maorx:hover{
+			 height: 30px;
+            width: 400px;
+            margin: 0px;
+			border-radius:30px;
+			opacity:0.8;
+
+		}
+        #search .button {
+            font-size: 17px;
+            font-weight: 600;
+            color: #002D96;
+            height: 30px;
+            width: 100px;
+            margin-left: 50px;
+            background: #e6efc2;
+            opacity: 0.5;
+
+            cursor: pointer;
+            -webkit-border-radius: 2px;
+            border-radius: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+<div class="wrapper">
+<div id="web_bg" style="background-image: url(images/zhuyebg5.jpg); "></div>
+
+<p>&nbsp;</p>
+<div id="search" align="center">
+    <table>
+        <tr>
+            <td>
+                <ul>
+                    <li style="display:block;">baidu</li>
+                    <li style="display:none;">google</li>
+                    <li style="display:none;">steam</li>
+                </ul>
+            </td>
+            <td id="from_box" style="padding-left:10px;">
+                <form id="from_baidu" style="display:block" action="http://www.baidu.com/baidu" target="_blank" method="get">
+                    <input type="text" name="word" class="maorx" placeholder="Search" style="text-align:center">
+                    <input class="button" type="submit" value="百度一下" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'"/>
+                </form>
+                <form id="from_google" style="display:none" action="http://www.google.com/search" target="_blank" method="get">
+					<input type="text" name="q" class="maorx" placeholder="Search" style="text-align:center">
+                    <input class="button" type="submit" value="google搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'"/>
+                </form>
+                <form id="from_steam" style="display:none" action="https://store.steampowered.com/search" target="_blank" method="get">
+                    <input type="text" name="term" class="maorx" placeholder="Search" style="text-align:center">
+                    <input class="button" type="submit" value="steam搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'"/>
+                </form>
+				
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div class="box1">
+<div class="pm"></div>
+<img src="images/s.png"/>
+<img src="images/f.png"/>
+<img class="mz" src="images/m.png"/>
+</div>
+
+<div class="login">
+<div id = "loginDiv">
+                    <div style="left:50px; font-size:24px">
+                    &nbsp;XmusicZ登录<span id = "hideLogin" style="float:right; margin-top:-30px; margin-right:5px">
+                    X</span>
+					</div>
+					
+<div id="user">
+<input type="text" placeholder="Username" id="name" class="inputstyle" style="font-size:20px">
+</div>
+
+<div id="password">
+<input type="password" placeholder="Password" id="pass" class="inputstyle" style="font-size:18px">
+</div>
+
+<div id="check">
+<input type="checkbox" /><span style="font-size: medium;">记住账号和密码</span>
+<span style="position:relative; left:50px"><a href="foget.html" style="text-decoration:none"><font size="5">忘记密码?</font></a></span>
+</div>
+
+<input type="submit" id="loginbutton" value="登录"  style="height:50px;" onclick="login()"/>
+</div>
+</div>
+	
+</div>
+<div>
+<button type="button" id="showLogin" style="position:absolute; top:20px; right:20px; font-size:20px; opacity:0.7">登录
+<button type="button" id="showLogin" style="position:absolute; top:20px; right:70px; font-size:20px; opacity:0.7"><a href="zhuce.html" style="text-decoration:none">注册</a>
+</div>
+
+
+
+<script  src="js/paopao.js"></script> 
+<script type="text/javascript">
+
+function login(){
+var username = document.getElementById("name").value;
+var password = document.getElementById("pass").value;
+if(username=="xiangzai" && password=="123456"){
+alert("登录成功");
+window.location = "login.html";
+return false;
+}
+else{
+alert("账号或密码错误");
+window.location.href= "foget.html";
+return false;
+}
+}
+const showLogin = document.querySelector("#showLogin");
+showLogin.onclick  = function(){
+	document.querySelector(".login").style.display = "block";
+	this.style.display = "none";
+}
+
+document.querySelector("#hideLogin").onclick  = ()=>{
+	document.querySelector(".login").style.display = "none";
+	showLogin.style.display = "block";
+	
+}
+
+
+    var search = document.getElementById("search");
+    var formbox = document.getElementById('from_box');
+    var forms = formbox.getElementsByTagName("form");
+    var ul = search.getElementsByTagName("ul")[0];
+    var li = ul.getElementsByTagName("li");
+    var length = li.length;
+    li[0].onclick = function() {
+        for(var i = 1; i < length; i++) {
+            li[i].style.display = "block";
+        }
+    }
+	
+    var n = 0; //第一个显示表单的位置
+    for(var i = 1; i < length; i++) {
+        li[i].onclick = function(a) {
+            return function() {
+                //交换显示的html内容
+                var temp = li[0].innerHTML;
+                li[0].innerHTML = this.innerHTML;
+                this.innerHTML = temp;
+                for(var j = 1; j < length; j++) {
+                    li[j].style.display ="none";
+                }
+                //交换表单的显示
+                //alert(li[0].innerHTML.substring(37,7));
+                //alert(li[0].innerHTML.indexOf('baidu'));
+                hidden_from(); //隐藏表单
+				//console.log(li[0]);
+                if(li[0].innerHTML.indexOf('baidu') == 0) {
+                    document.getElementById('from_baidu').style.display = 'block';
+                } else if(li[0].innerHTML.indexOf('google') == 0) {
+                    document.getElementById('from_google').style.display = 'block';
+                } else if(li[0].innerHTML.indexOf('steam') == 0) {
+                    document.getElementById('from_steam').style.display = 'block';
+                }
+                //alert(this.innerHTML);
+                //forms[n].style.display = "none";
+                //forms[a].style.display = "block";
+                //n = a;
+            }
+        }(i);
+        li[i].onmouseover = function() {
+            this.style.border ="#7fb80e 1px solid";
+            this.style.background ="#f2eada";
+        }
+        li[i].onmouseout = function() {
+            this.style.border = "0px";
+            this.style.background = "inherit";
+        }
+    }
+    //隐藏搜索框表单的函数
+    function hidden_from() {
+        for(var j = 0; j < forms.length; j++) {
+            forms[j].style.display = "none";
+        }
+    }
+     
+	 
+	 let maorx = document.querySelector(".maorx");
+	maorx.onfocus = function(){
+		document.querySelector("#web_bg").style.filter = "blur(10px)";
+	}
+	maorx.onblur = function(){
+		document.querySelector("#web_bg").style.filter = "blur(0px)";
+	}
+</script>
+
+</body>
+</html>

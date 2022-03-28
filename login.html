@@ -1,0 +1,437 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312"/>
+<title>XZmusic</title>
+
+<link rel="stylesheet" href="css/quanping.css">
+<link rel="shortcut icon" href="images/logo1.png"type="image/x-icon">
+<link rel="stylesheet" href="css/daohang.css">
+<link rel="stylesheet" href="css/pop.css">
+<link rel="stylesheet" href="css/yulan.css">
+<link rel="stylesheet" href="css/gedan.css">
+<link rel="stylesheet" href="css/xinge.css">
+<link rel="stylesheet" href="css/paihang.css">
+
+<style>
+*{
+	scroll-behavior:smooth;
+}
+.bottom{
+  z-index:-99;
+  background: #333;
+  border: 1px solid #333333;
+  box-shadow: 0 -5px 30px #000;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  color: white;
+}
+.audioarea{
+	width:100%;
+	height:50px;
+	bottom:30px;
+	position:fixed
+}
+audio{
+float:right;
+margin-right:21px;
+opacity:0.8;
+}
+.audioaction{
+opacity:0.3;
+}
+</style>
+</head>
+
+<body>
+<div id="web_bg" style="background-image:url(images/bg.jpg); overflow:auto">
+<ul class="nav">
+
+            <div class="nav1" style="padding-left:50px; padding-right:30px"><img src="images/finallogo.png" width="50px" height="50px"  style="margin-left:5px; margin-top:10px; opacity:0.8"/><a href="login.html"><font color="#FFFFFF" size="5">首页</font></a>
+			<div class="nav2">
+				<a href="https://music.163.com/#/my/m/music/playlist?id=2357385512" target="_blank"><font color="#FFFFFF" size="5">喜欢</font></a>
+				<a href="index.html"><font color="#FFFFFF" size="5">登录</font></a>
+				<a href="zhuce.html"><font color="#FFFFFF" size="5">注册</font></a>
+				<a href="kefu.html"><font color="#FFFFFF" size="5">客服</font></a>
+				<a href="#about"><font color="#FFFFFF" size="5">关于</font></a>	
+			</div>
+			</div>
+
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#gedan">歌单</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#xinge">新歌</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#paihang">排行榜</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="MV.html">MV</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="singer.html">歌手</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="shop.html">外设商城</a></font></div>
+
+			
+<li id="search">
+    <table>
+        <tr>
+            <td id="from_box" style="padding-left:10px; padding-top:30px;">
+                <form id="from_steam" style="display:block" action="http://www.baidu.com/baidu" target="_blank" method="get">
+                    <input type="text" name="word" class="index" placeholder="Search" style="text-align:center">
+                    <input class="button" type="submit" value="搜索" onMouseOver="this.style.opacity='1'" onMouseOut="this.style.opacity='0.7'"/>
+                </form> 
+			</td>
+        </tr>
+    </table>
+</li>
+</ul>
+
+<div class="audioarea">
+<audio src="music/bgmusic.mp3" controls="controls" loop autoplay></audio>
+</div>
+
+<div id="top" class="pop">
+	<div class="poptext"><img src="images/weblogo.png" />
+	</div>
+</div>
+
+<div id="scrollDown">
+	<a href="#gedan"><span id="scrollDownIcon"></span></a>
+</div>
+
+<div class="popafter">
+<div align="center" class="yulanbg" style="margin-top:0px">
+<div class="yulan" id="gedan">
+<a href="https://music.163.com/#/song?id=1887190390"><img src="images/yulan1.png" id="images" width="912" height="355" style="box-shadow:10px 0 50px #000"></a>
+</div>
+</div>
+<p>&nbsp;</p>
+
+<h1 style="text-align:center; color:#FFFFFF">歌单推荐</h1>
+
+<div class="gedanarea" align="center">
+
+<div class="songchoose">
+	<ul>
+		<font size="5"><a href="#" style="color:#FFFFFF; margin-left:120px">为你推荐</a></font>			
+		<font size="5"><a href="#" style="color:#FFFFFF">网络歌曲</a></font>		
+		<font size="5"><a href="#" style="color:#FFFFFF">国语</a></font>
+		<font size="5"><a href="#" style="color:#FFFFFF">粤语精选</a></font>
+		<font size="5"><a href="#" style="color:#FFFFFF">劲爆DJ</a></font>
+		<font size="5"><a href="gamelist.html" style="color:#FFFFFF">热门游戏</a></font>
+		<font size="5"><a href="music.html" style="color:#FFFFFF; margin-left:40px; padding:0 10px">>>更多>></a></font>
+	</ul>
+	
+</div>
+
+
+<div class="songlist">
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_fjords.jpg">
+      <img src="images/gedan1.png">
+    </a>
+    <div class="desc"><font size="4">每日新歌：汪苏泷深情献唱影视插曲</font></div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="images/gedan2.png"  >
+    </a>
+    <div class="desc"><font size="4">「花式摇滚VS峰式摇滚」引爆你压抑的灵魂</font></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="images/gedan3.png">
+    </a>
+    <div class="desc" id="xinge"><font size="4">古风·儿歌 | 藏剑少爷的学前音乐教材</font></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="images/gedan4.png" >
+    </a>
+    <div class="desc"><font size="4">冷门电音：无法遗忘的女声诱惑</font></div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="images/gedan5.png" >
+    </a>
+    <div class="desc"><font size="4">华语新歌：近期热门诚心推荐</font></div>
+  </div>
+</div>
+</div>
+
+</div>
+<p>&nbsp;</p>
+
+<h1 style="text-align:center; color:#FFFFFF">新歌首发</h1>
+<div class="xingearea" align="center">
+				<div class="xingechoose">
+					<ul>
+						<font size="5"><a href="#" style="color:#FFFFFF">内地</a></font>			
+						<font size="5"><a href="#" style="color:#FFFFFF">港台</a></font>		
+						<font size="5"><a href="#" style="color:#FFFFFF">欧美</a></font>
+						<font size="5"><a href="#" style="color:#FFFFFF">日本</a></font>
+						<font size="5"><a href="#" style="color:#FFFFFF">韩国</a></font>
+					</ul>
+				</div>
+				<div class="xinge">
+					<ul>
+						<li>
+							<img src="images/newsong1.jpg">
+							<a href="#" class="songname">No One Knows</a>
+							<a href="#" class="singername">汪苏泷</a>
+						</li>
+						<li>
+							<img src="images/newsong2.jpg">
+							<a href="#" class="songname">远大前程</a>
+							<a href="#" class="singername">南征北战NZBZ</a>
+						</li>
+						<li>
+							<img src="images/newsong3.jpg">
+							<a href="#" class="songname">想你的一夜</a>
+							<a href="#" class="singername">孙子涵</a>
+						</li>
+						<li>
+							<img src="images/newsong4.jpg">
+							<a href="#" class="songname">送你一匹马</a>
+							<a href="#" class="singername">金志文</a>
+						</li>
+						<li>
+							<img src="images/newsong5.jpg">
+							<a href="#" class="songname">十八岁给我</a>
+							<a href="#" class="singername">好妹妹乐队</a>
+						</li>
+						<li>
+							<img src="images/newsong6.jpg">
+							<a href="#" class="songname">落花</a>
+							<a href="#" class="singername">李琦</a>
+						</li>
+						<li>
+							<img src="images/newsong7.jpg">
+							<a href="#" class="songname">Sorry</a>
+							<a href="#" class="singername">艾福杰尼</a>
+						</li>
+						<li>
+							<img src="images/newsong8.jpg">
+							<a href="#" class="songname">我不想哭</a>
+							<a href="#" class="singername">晨曦</a>
+						</li>
+						<li>
+							<img id="paihang" src="images/newsong9.jpg">
+							<a href="#" class="songname">花开</a>
+							<a href="#" class="singername">陈粒</a>
+						</li>	
+					</ul>
+</div>
+</div>
+
+
+<p>&nbsp;</p>
+
+<h1 style="text-align:center; color:#FFFFFF">排行榜</h1>
+
+<div class="paihangarea">
+	<ul id="tab_t">
+ 		<li class="act">飙升榜</li>
+ 		<li>新歌榜</li>
+ 		<li>原创榜</li>
+ 	</ul>
+	<a href="https://music.163.com/#/discover/toplist" style="float:right; margin-right:5px; margin-top:5px; text-decoration:none; color:#990000; font-size:15px; font-weight:bold">更多>></a>
+ 	<div id="tab_c">
+		
+ 		<div>
+			<p><span style="color:#990000; font-weight:bolder">1 &nbsp; </span>
+				<a href="#">没你也能活下去</a>
+			</p>
+			<p><span style="color:#990000; font-weight:bolder">2 &nbsp; </span>
+				<a href="#">都不懂</a>
+			</p>
+			<p><span style="color:#990000; font-weight:bolder">3 &nbsp; </span>
+				<a href="#">Soufflé</a>
+			</p>
+			<p><span>4&nbsp; </span>
+				<a href="#">One Right Now</a>
+			</p>
+			<p><span>5&nbsp; </span>
+				<a href="#">ESCAPE PLAN</a>
+			</p>
+			<p><span>6&nbsp; </span>
+				<a href="#">浪漫主义</a>
+			</p>
+			<p><span>7&nbsp; </span>
+				<a href="#">Smokin Out The Window</a>
+			</p>
+			<p><span>8&nbsp; </span>
+				<a href="#">STAY</a>
+			</p>
+			<p><span>9&nbsp; </span>
+				<a href="#">水中花</a>
+			</p>
+			<p><span>10&nbsp; </span>
+				<a href="#">山脚</a>
+			</p>
+		</div>
+
+ 		<div class="hide">
+			<p><span style="color:#990000; font-weight:bolder">1&nbsp; </span>
+				<a href="#">浪漫主义</a>
+			</p>
+			<p><span style="color:#990000; font-weight:bolder">2&nbsp; </span>
+				<a href="#">路过人间</a>
+			</p>
+			<p><span style="color:#990000; font-weight:bolder">3&nbsp; </span>
+				<a href="#">情人</a>
+			</p>
+			<p><span>4&nbsp; </span>
+				<a href="#">指纹</a>
+			</p>
+			<p><span>5&nbsp; </span>
+				<a href="#">没你也能活下去</a>
+			</p>
+			<p><span>6&nbsp; </span>
+				<a href="#">偏爱和例外</a>
+			</p>
+			<p><span>7&nbsp; </span>
+				<a href="#">百年孤寂</a>
+			</p>
+			<p><span>8&nbsp; </span>
+				<a href="#">都不懂</a>
+			</p>
+			<p><span>9&nbsp; </span>
+				<a href="#">如果说(Live)</a>
+			</p>
+			<p><span>10&nbsp; </span>
+				<a href="#">一分一寸</a>
+			</p>
+		</div>
+		
+ 		<div class="hide">
+			<p><span style="color:#990000; font-weight:bolder">1&nbsp; </span>
+				<a href="#">例外</a>
+			</p>
+			<p><span style="color:#990000; font-weight:bolder">2&nbsp; </span>
+				<a href="#">斩</a>
+			</p>
+			<p><span style="color:#990000; font-weight:bolder">3&nbsp; </span>
+				<a href="#">侠客行</a>
+			</p>
+			<p><span>4&nbsp; </span>
+				<a href="#">棉湖</a>
+			</p>
+			<p><span>5&nbsp; </span>
+				<a href="#">THANK ME</a>
+			</p>
+			<p><span>6&nbsp; </span>
+				<a href="#">浪漫至死</a>
+			</p>
+			<p><span>7&nbsp; </span>
+				<a href="#">纽约1961</a>
+			</p>
+			<p><span>8&nbsp; </span>
+				<a href="#">第一支舞</a>
+			</p>
+			<p><span>9&nbsp; </span>
+				<a href="#">it's 6pm but I miss u already.</a>
+			</p>
+			<p><span>10&nbsp; </span>
+				<a href="#">梁潮伟</a>
+			</p>
+		</div>
+
+   </div>
+</div>
+
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="center"><a href="#top" style="text-decoration:none"><font size="24" color="#CCCCCC">返回顶部</font></a></p>
+
+<div class="bottom">
+<p>&nbsp;</p>
+	<p>地址：-------------- &nbsp;&nbsp; 电话：-------------</p>
+	<p></p>
+	<p id="about">&copy;=============</p>
+</div>
+
+</div>
+</div>
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquery/1.8.3/jquery.js"></script>
+<script>
+	 
+            var arr=new Array()
+            arr[0]="images/yulan1.png";
+            arr[1]="images/yulan2.png";
+            arr[2]="images/yulan3.png";
+			arr[3]="images/yulan4.png";
+			arr[4]="images/yulan5.png";
+			arr[5]="images/yulan6.png";
+			arr[6]="images/yulan7.png";
+			arr[7]="images/yulan8.png";
+			arr[8]="images/yulan9.png";
+            var i=0;
+            function images()
+            {
+                var images=document.getElementById("images");
+                images.src=arr[i];
+                i++;
+                if(i>8){i=0};             
+            };
+            setInterval(function(){
+            images();
+            },2000);
+					
+
+ $("div").scroll(function(){
+ 	var $scroll=$(document).scrollTop();
+ 	if($scroll==0){
+             $(".nav").addClass("action");
+			 $(".yulan").addClass("yulanxiayi");
+			 $(".audioarea").addClass("audioaction");
+        }
+ });
+ 
+ let nav = document.querySelector(".nav");
+ nav.onclick = function(){
+ 	this.classList.remove("action");
+ }
+ 
+ let audio = document.querySelector(".audioarea");
+audio.onclick = function(){
+ 	this.classList.remove("audioaction");
+ }
+</script>
+
+<script>
+window.onload = function(){
+ tab("tab_t","li","tab_c","div","onmouseover")
+ function tab(tab_t,tab_t_tag,tab_c,tag_c_tag,evt){
+  var tab_t = document.getElementById(tab_t);
+  var tab_t_li = tab_t.getElementsByTagName(tab_t_tag);
+  var tab_c = document.getElementById(tab_c);
+  var tab_c_li = tab_c.getElementsByTagName(tag_c_tag);
+  var len = tab_t_li.length;
+  var i=0;
+  for(i=0; i<len; i++){
+   tab_t_li[i].index = i;
+   tab_t_li[i][evt] = function(){
+    for(i=0; i<len; i++){
+     tab_t_li[i].className = '';
+     tab_c_li[i].className = 'hide';
+    }
+    tab_t_li[this.index].className = 'act';
+    tab_c_li[this.index].className = '';
+   }
+  }
+ }
+}
+</script>
+</body>
+</html>

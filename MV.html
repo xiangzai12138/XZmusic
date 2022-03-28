@@ -1,0 +1,416 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>MV</title>
+<link rel="stylesheet" href="css/quanping.css">
+<link rel="shortcut icon" href="images/logo1.png"type="image/x-icon">
+<link rel="stylesheet" href="css/daohang.css">
+</head>
+<style>
+.bottomarea{
+	width:100%;
+	height:100px;
+	background-color:rgba(99,00,00,0.7);
+	border:2px solid #333;
+	box-shadow:5px 5px 10px #000;
+}
+.bottomtext{
+	font-size:50px;
+	font-weight:bold;
+	color: #FFFFFF;
+	margin-top:10px;
+}
+.bottom{
+  z-index:-99;
+  background: #333;
+  border: 1px solid #333333;
+  box-shadow: 0 -5px 30px #000;
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  color: white;
+}
+
+.playarea{
+	width:1690px;
+	height:750px;
+	margin:0 auto;
+	margin-top:100px;
+	position:relative;
+	background-color:rgba(0,0,0,0);
+}
+
+#video{
+	width:1280px;
+	height:733px;
+	position:relative;
+	float:left;
+	border:5px groove #FFF;
+	z-index:99;
+}
+aside{/*主要内容的附加内容：播放列表h*/
+	float: left;
+	height: 733px;
+	width:400px;
+	background-color:rgba(0,0,0,0.5);
+	position: relative;
+}
+aside header{
+background-color: rgba(200,0,0,0.5);
+}
+aside ul{
+	background:black;
+	width:400px;
+	padding:0 0;
+	list-style:none;
+	text-align:center;
+}
+aside ul li{
+	color:white;
+	font-size:25px;
+	padding:10px 0;
+	margin:0 auto;
+}
+aside ul li:hover{
+	background-color:#CCCCCC;
+	color:#990000;
+	font-weight:bolder;
+	cursor:pointer;
+}
+aside #playList-hidden{
+	position:absolute;
+	bottom:350px;
+	right: 0;
+	width:30px ;
+	height:50px;
+	background: lightgoldenrodyellow;
+	font-size: 16px;
+	font-weight: bold;
+	border-top-left-radius:10px ;
+	border-bottom-left-radius:10px ;
+	opacity: 0.5;
+	z-index: 10000;
+}
+.playarea #playList-show1{
+	margin-top:330px;
+	width:30px ;
+	height: 50px;
+	background:lightgoldenrodyellow;
+	font-size: 16px;
+	font-weight: bold;
+	border-top-right-radius:10px ;
+	border-bottom-right-radius:10px ;
+	opacity: 1;
+	visibility: hidden;
+}
+
+.playarea #playList-show1:hover,aside #playList-hidden:hover{
+	opacity: 0.7;
+}
+.select{
+	color: lightcoral;
+}
+
+
+        input[type="color"] {
+            width: 100px;
+            height: 28px;
+            vertical-align: middle;
+        }
+
+        .playarea marquee {
+            position: absolute;
+            z-index:9999;
+            left: 0;
+        }
+
+.danmuarea{
+width:1000px;
+height:70px;
+border-radius:50px;
+background-color:rgba(200,200,200,0.5);
+margin:0 auto;
+}
+				
+.pinglunquarea{
+background-color:rgba(200,200,200,0.7);
+border:7px #FFFFFF groove;
+border-radius:30px;
+box-shadow:20px 20px 50px #000; 
+width:2000px;
+height:2000px;
+margin:20px auto;
+margin-top:50px;
+font-size:40px;
+font-weight:bolder;
+}
+.pinglun{
+width:1800px;
+height:250px;
+margin:0 auto;
+border:7px #FFFFFF groove;
+border-radius:50px;
+box-shadow:10px 10px 30px #000;
+background-color:rgba(255,255,255,0.7);
+}
+#shuru{
+width:600px;
+height:200px;
+margin:30px auto;
+}
+#user{
+width:500px;
+height:50px;
+}
+#say{
+margin-top:30px;
+width:500px;
+height:50px;
+}
+</style>
+
+<body>
+
+<div id="web_bg" style="background-image:url(images/bg.jpg); overflow:auto">
+
+<ul class="nav">
+
+            <div class="nav1" style="padding-left:50px; padding-right:30px"><img src="images/finallogo.png" width="50px" height="50px"  style="margin-left:5px; margin-top:10px; opacity:0.8"/><a href="login.html"><font color="#FFFFFF" size="5">首页</font></a>
+			<div class="nav2">
+				<a href="https://music.163.com/#/my/m/music/playlist?id=2357385512" target="_blank"><font color="#FFFFFF" size="5">喜欢</font></a>
+				<a href="index.html"><font color="#FFFFFF" size="5">登录</font></a>
+				<a href="zhuce.html"><font color="#FFFFFF" size="5">注册</font></a>
+				<a href="kefu.html"><font color="#FFFFFF" size="5">客服</font></a>
+				<a href="#about"><font color="#FFFFFF" size="5">关于</font></a>	
+			</div>
+			</div>
+
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#gedan">歌单</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#xinge">新歌</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="#paihang">排行榜</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="MV.html">MV</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="singer.html">歌手</a></font></div>
+			<div class="nav1"><font color="#FFFFFF" size="5"><a href="shop.html">外设商城</a></font></div>
+
+</ul>
+
+<div class="playarea" id="mv">
+<video controls="controls" id="video"　src="" poster="" height="500px" width="500px"></video>
+<marquee behavior="" direction="" loop="1" scrollamount="20" class="marq" style="font-size:50px; margin-right:400px"></marquee>
+<aside id="playList">
+	<header><h1 align="center" style="font-size:30px">列表</h1></header>
+	<ul>
+		<li value="video/1.mp4" title="我和我的祖国-群星">我和我的祖国-群星</li>
+		<li value="video/2.mp4" title="CAN'T STOP THE FEELING!-Justing Timberlake">CAN'T STOP THE FEELING!-Justing Timberlake</li>
+		<li value="video/3.mp4" title="Don't-Ed Sheeran">Don't-Ed Sheeran</li>
+		<li value="video/4.mp4" title="Something Just Like This-Coldplay/The Chainsmokers">Something Just Like This-Coldplay/The Chainsmokers</li>
+		<li value="video/5.mp4" title="Uptown Funk-Maroon 5">Uptown Funk-Maroon 5</li>
+		<li value="video/6.mp4" title="以父之名-周杰伦">以父之名-周杰伦</li>
+		<li value="video/7.mp4" title="上和下-EXID">上和下-EXID</li>
+		<li value="video/8.mp4" title="短裙-AOA">短裙-AOA</li>
+		<li value="video/9.mp4" title="不说再见-好妹妹乐队">不说再见-好妹妹乐队</li>
+		<li value="video/10.mp4" title="花开那年-姚云">花开那年-姚云</li>
+		<li value="video/11.mp4" title="同桌的你-胡夏">同桌的你-胡夏</li>
+	</ul>
+	<button title="收起播放列表" id="playList-hidden"> < </button>
+</aside>
+    <button title="展开播放列表" id="playList-show1"> > </button>
+</div>
+
+
+<div class="danmuarea">
+<input type="text" id="txt" style="font-size:40px; margin-left:100px; border-radius:20px">
+        <input type="color" id="color" style=" width:150px; height:50px; margin-bottom:15px">
+        <button id="btn" style="font-size:35px; margin-top:5px">发送</button>
+</div>
+
+
+<div class="pinglunquarea" id="pinglunquarea">
+<h1 align="center">欢迎下方留言！</h1>
+ <!-- 创建昵称和留言文本框 -->
+ <div class="pinglun">
+ 	<div id="shuru">
+        <span style="color:#990000; font-size:30px">昵称：</span><input type="text" id="user" placeholder="请留下你的大名！" name="user" style="font-size:30px">
+        <br>
+        <span style="color:#990000; font-size:30px">留言：</span><textarea id="say" placeholder="来说点什么吧！" style="font-size:35px"></textarea><br>
+		    <!-- 创建提交评价按钮 -->
+		<input type="button" value="发表评论" id="tijiao" style="font-size:35px; margin-top:10px; float:right">
+	</div>
+    
+ </div>
+</div>
+
+<div class="bottomarea">
+<marquee class="bottomtext" direction="left" behavior="scroll" scrollamount="30">公告：本页面视频转载自网络，侵权即删</marquee>
+</div>
+
+<div class="bottom">
+<p>&nbsp;</p>
+<p>客服E-mail：2039989733@qq.com</p>
+	<p>地址：-------------- &nbsp;&nbsp; 电话：-------------</p>
+	<p></p>
+	<p id="about">&copy;=============</p>
+</div>
+
+</div>
+<script type="text/javascript" src="js/jquery-1.7.2.min.js" ></script>
+<script type="text/javascript" src="js/main.js" ></script>
+<script>
+window.onload = function(){
+	
+	var video = document.getElementById("video");
+	var lis = document.getElementsByTagName("li");
+	var vLen = lis.length; // 播放列表的长度
+	var url = [];
+	var ctrl = document.getElementById("playList-hidden");
+	var ctrl_show = document.getElementById('playList-show1');
+	var aside = document.getElementById("playList");
+	var curr = 1; // 当前播放的视频
+	
+	for(var i=0;i<lis.length;i++){
+		
+			url[i] = lis[i].getAttribute("value");
+			
+	}
+	
+	//绑定单击事件
+	for(var i=0;i<lis.length;i++){
+		
+			lis[i].onclick = function(){
+				for(var j=0;j<lis.length;j++){
+					if(lis[j] == this){
+						video.setAttribute("src",this.getAttribute("value"));
+						video.setAttribute('autoplay','autoplay');
+						this.innerHTML = '正在播放'+this.innerHTML;
+						this.className = "select";
+						curr = j+1;
+					}else{
+						lis[j].innerHTML = lis[j].getAttribute("title");
+						lis[j].className = "";
+					}
+				}
+				
+			
+//			console.log(this.getAttribute("value"));  //调试代码
+		}
+			
+	}	
+	
+	//收起播放列表
+	ctrl.onclick = function(){
+		
+		aside.style.transition = "1s";
+		aside.style.transform = "translateX(-400px)";
+		setTimeout(function(){
+			aside.style.display = "none";
+			ctrl_show.style.visibility= 'visible';
+		},"1000");
+	
+	}
+	
+	//展开播放列表
+	ctrl_show.onclick = function(){
+		aside.style.display = "block";
+		ctrl_show.style.visibility= 'hidden';
+		setTimeout(function(){
+			aside.style.transform = "translateX(0vw)";
+		},"0");
+	
+	}
+
+	video.setAttribute('src',url[0]);
+	lis[0].innerHTML = '正在播放'+lis[0].innerHTML;
+	lis[0].className = "select";
+	
+	
+	
+	video.addEventListener('ended', play);
+	//play();
+	function play() {
+	   video.src = url[curr];
+	   video.load(); // 如果短的话，可以加载完成之后再播放，监听 canplaythrough 事件即可
+	   video.play();
+	   
+	   for(var j=0;j<lis.length;j++){
+			if(j == curr){
+				video.setAttribute("src",lis[j].getAttribute("value"));
+				video.setAttribute('autoplay','autoplay');
+				lis[j].innerHTML = '正在播放'+lis[j].innerHTML;
+				lis[j].className = "select";
+			}else{
+				lis[j].innerHTML = lis[j].getAttribute("title");
+				lis[j].className = "";
+			}
+		}
+	   curr++;
+	   if (curr >= vLen) curr = 0; // 播放完了，重新播放
+	}
+	
+}
+
+</script>
+
+
+
+<script type="text/javascript">
+    //通过id属性查找标签节点
+    var user=document.getElementById('user');
+    var lang=document.getElementById('say');
+    //通过id属性查找提交评价按钮并绑定点击事件
+    document.getElementById('tijiao').onclick=function(){
+		if (!lang.value) return;
+        //在html代码中创建一个div盒子
+        var cont=document.createElement('div');
+        //将获取到的数据，放到一创建好的盒子中
+		user.value = user.value || '用户' + Math.round(Math.random() * 10000);
+        cont.innerHTML='<hr><p>'+user.value+':&nbsp;'+lang.value+'</p>';
+        //将创建好的div盒子及及内容显示在页面中
+        document.getElementById('pinglunquarea').appendChild(cont);
+        user.value='';
+        lang.value='';
+    }
+
+	
+	
+	var color = document.getElementById("color")
+        var txt = document.getElementById("txt")
+        var mv = document.getElementById("mv")
+        var btn = document.getElementById("btn")
+        var marq = document.querySelector(".marq")
+        // 存储默认颜色值
+        var newColor = '#000';
+        // 获取到更换的颜色值
+        color.onchange = function () {
+            newColor = color.value
+        }
+        // 给发送按钮注册事件
+        btn.onclick = function (e) {
+            // 克隆一条弹幕元素
+            var dm = marq.cloneNode()
+            // console.log(dm);
+            // 讲输入的内容赋值给克隆的弹幕标签
+            dm.innerText = txt.value
+            // console.log(dm);
+            // 设置该条弹幕的颜色
+            dm.style.color = newColor
+            // 将克隆的弹幕标签放入mv元素中
+            mv.appendChild(dm)
+            // 让弹幕出现在随机位置
+            dm.style.top = Math.random() * 200 + 'px'
+            //发送后清空txt文本
+            txt.value = ""
+            // console.log(marq.scrollamount);
+            //给个定时器，8秒后删除该条弹幕
+            setTimeout(function () {
+                dm.remove(dm)
+            }, 10000)
+        }
+        // 按enter键触发点击发送事件
+        txt.onkeydown = function (e) {
+            if (e.keyCode == 13)
+                btn.click()
+        }
+</script>
+</body>
+</html>
