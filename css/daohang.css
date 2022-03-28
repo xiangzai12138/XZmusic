@@ -1,0 +1,110 @@
+/* CSS Document */
+.nav{
+    list-style-type: none;
+    padding: 0px 0px;
+	margin:0 auto;
+	background-color: rgba(0,0,0,0);
+	width:100%;
+	position:fixed;
+}/* 对导航栏的整体样式进行设置 */
+
+.action{
+	background-color:rgba(99,0,0,0.9);
+	box-shadow: 0 10px 20px #000;
+	border: 1px solid #333333;
+	z-index:9999;
+}
+
+.nav ul li{
+    list-style: none;
+    float: left;
+}/* 删除列表的样式并设置浮动 */
+.nav1 a{
+    color: white;
+    padding:10px 20px;
+    margin: 0px;
+    text-decoration: none;
+}/* 设置a标签的样式 */
+
+.nav1 a:hover{
+	border-radius:25px;
+	box-shadow:10px 10px 20px #000;
+	background-image: -webkit-radial-gradient(
+        #ffdcb4,
+        #b96972 25%,
+        #e88a57 50%,
+        #804170 75%,
+        #a596cd 100%);
+        text-fill-color: transparent;
+        background-clip: text;
+        background-size: 200% 100%;
+        animation: masked-animation 4s infinite linear;
+}
+    @-webkit-keyframes masked-animation {
+        0% {
+            background-position: 0 0;
+        }
+        100% {
+            background-position: -100% 0;
+        }
+    }
+
+.nav1 {
+    position: relative;/* 设置相对定位 */
+    display: inline-block;/* 让元素具有块级元素和行内元素的特性,即将块级元素转化为内联元素 */
+	padding:10px 10px;
+}
+
+.nav2 {
+    display: none;/* 将某元素隐藏起来 */
+    position: absolute;/* 绝对定位 */
+	margin:5px 10px;
+	min-width: 50px;/* 最小宽度 */
+	box-shadow: 10px -10px 30px #000;
+	z-index:9999;
+}
+
+.nav2 a {
+    padding: 10px 15px;
+    display: block;/* 将a标签设置为块级标签 */
+
+}
+
+.nav1:hover .nav2 {
+    display: block;
+}/* 鼠标悬浮在元素上时,变为块级标签 */
+
+
+		#search{
+		float:right;
+		margin:0 100px;
+		}
+
+        #search input{
+            height: 40px;
+            width: 200px;
+            margin: 0px;
+			border-radius:30px;
+			opacity:0.3;
+			transition: all 0.3s ease-in;
+			box-shadow: 10px 10px 10px #000;
+        }
+		#search .index:hover{
+			 height: 30px;
+            width: 400px;
+            margin: 0px;
+			border-radius:30px;
+			opacity:0.8;
+
+		}
+        #search .button {
+            font-size: 17px;
+            font-weight: 600;
+            color: #000066;
+            height: 30px;
+            width: 100px;
+            margin-left: 20px;
+
+            cursor: pointer;
+            border-radius: 10px;
+        }

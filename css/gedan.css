@@ -1,0 +1,81 @@
+/* CSS Document */
+.gedanarea{
+    z-index:-1;
+	width:1200px;
+	height:400px;
+	margin:0  auto;
+	background-color:rgba(150,33,0,0.5);
+	box-shadow: 10px 10px 30px #000;
+}	
+
+.songchoose{
+width:1200px;
+height:50px;
+float:left;
+margin:0 auto;
+box-shadow: 0px 10px 20px #000;
+}
+
+.songlist{
+width:1200px;
+height:340px;
+top:55px;
+position: relative;
+background-color:rgb(25,25,25,0.5);
+
+}
+
+.songchoose ul{
+width:1200px;
+height:30px;
+margin:10px auto;
+}
+
+.songchoose a{
+padding:0 20px;
+float:left;
+margin:0 10px;
+text-decoration:none;
+}
+
+.songchoose a:hover{
+box-shadow:5px 5px 10px #000;
+background-color:rgba(255,255,240,0.3);
+}
+
+div.img{
+    margin: 20px;
+    float: left;
+    width: 210px;
+	box-shadow:5px 5px 5px #000;
+}
+
+div.img:hover {
+    border: 1px solid #777;
+	box-shadow:10px 10px 10px #000;
+	width:210px;
+	height:210px;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.img img:hover{
+transform: scale(1.1);
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+	color:#FFFFFF;
+}
+
+.responsive {
+	margin:-30px auto;
+    padding: 0 7px;
+	float:left;
+	width:220px;
+	height:275px;
+}
